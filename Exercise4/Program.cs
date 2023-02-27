@@ -5,6 +5,7 @@ int b = int.Parse(Console.ReadLine() ?? "");
 Console.WriteLine("Введите третье целое число");
 int c = int.Parse(Console.ReadLine() ?? "");
 
+if (a==b || a==c || b==c) Console.WriteLine($"{a} {b} {c} -> имеются равные числа");
 
 if (a > b & a > c) Console.WriteLine($"{a} {b} {c} -> {a} - максимальное");
 else 
