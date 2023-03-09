@@ -6,7 +6,7 @@ int x2 = InputNumber("Введите х2: ");
 int y2 = InputNumber("Введите у2: "); 
 int z2 = InputNumber("Введите z2: "); 
 
-Console.WriteLine($"Расстояние между точками ({x1}, {y1}, {z1}) и ({x2}, {y2}, {z1}) равна {CalculateDistance(x1, y1, z1, x2, y2, z2)}");
+Console.WriteLine($"Расстояние между точками A ({x1}, {y1}, {z1}) и B ({x2}, {y2}, {z1}) равна {CalculateDistance(x1, y1, z1, x2, y2, z2)}");
 
 
 static int InputNumber(string message)
