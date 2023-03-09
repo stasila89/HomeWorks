@@ -1,25 +1,15 @@
-﻿Console.Clear();
+﻿Console.Clear ();
 Console.WriteLine("Введите число: ");
-int cube = int.Parse(Console.ReadLine() ?? "");
-
-void Cube(int[] cube){
-  int counter = 0;
-  int length = cube.Length;
-  while (counter <  length){
-    cube[counter] = Convert.ToInt32(Math.Pow(counter, 3));
-    counter++;
-  }
+int number;
+while (true)
+{
+    if (int.TryParse(Console.ReadLine(), out number))
+        break;
+    Console.WriteLine("Ошибка ввода");
 }
-
-void PrintArry(int[] coll){
-  int count = coll.Length;
-  int index = 0;
-  while(index < count){
-    Console.Write(coll[index]+ " ");
-    index++;
-  }
-} 
-
-int[] arry = new int[cube+1];
-Cube(arry);
-PrintArry(arry);
+Console.WriteLine($"Кубы чисел от 1 до {number} будут: ");
+for (int i=1;i<=number;i++)
+{
+int Cube = i*i*i;
+Console.WriteLine($"{Cube}");
+}
